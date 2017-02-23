@@ -1,4 +1,3 @@
-
 'use strict';
 
 module.exports = function(grunt) {
@@ -438,6 +437,7 @@ module.exports = function(grunt) {
         grunt.task.run([
             'clean:server',
             'wiredep',
+            'ngtemplates',
             'concurrent:server',
             'postcss:server',
             'connect:livereload',

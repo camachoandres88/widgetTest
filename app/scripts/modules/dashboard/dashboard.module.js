@@ -11,6 +11,7 @@
 
     angular
         .module('widgetTestApp.modules.dashboard', [
-            'widgetTestApp.directives.profileWidget'
+            'widgetTestApp.directives.profileWidget',
+            'widgetTestApp.directives.statisticsWidget'
         ]);
 })();
