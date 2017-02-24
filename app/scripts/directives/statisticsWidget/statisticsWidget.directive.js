@@ -20,7 +20,7 @@
             restrict: 'E',
             template: $templateCache.get('statisticsWidget/statisticsWidget.template.html'),
             scope: {
-                inputData: '='
+                widgetData: '='
             },
             controller: 'StatisticsWidgetController',
             bindToController: true,

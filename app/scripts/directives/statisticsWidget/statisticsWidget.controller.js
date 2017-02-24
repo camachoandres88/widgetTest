@@ -9,5 +9,6 @@
 
     function StatisticsWidgetController() {
         var vm = this;
+        vm.widgetData = vm.widgetData || {};
     }
 })();

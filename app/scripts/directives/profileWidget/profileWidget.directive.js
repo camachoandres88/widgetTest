@@ -20,7 +20,7 @@
             restrict: 'E',
             template: $templateCache.get('profileWidget/profileWidget.template.html'),
             scope: {
-                inputData: '='
+                widgetData: '='
             },
             controller: 'ProfileWidgetController',
             bindToController: true,

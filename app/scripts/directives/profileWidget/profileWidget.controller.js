@@ -9,5 +9,6 @@
 
     function ProfileWidgetController() {
         var vm = this;
+        vm.widgetData = vm.widgetData || {};
     }
 })();

@@ -1,0 +1,41 @@
+<div class="form-widget-container">
+    <form name="formWidgetCtrl.contactForm" novalidate>
+        <div class="form-body">
+            <div class="form-contacts">
+                <label>Contact</label>
+                <tags-input name="emails" ng-model="formWidgetCtrl.emails" min-tags="1" allowed-tags-pattern="{{formWidgetCtrl.pattern}}"></tags-input>
+                <div ng-if="formWidgetCtrl.contactForm.$submitted" ng-messages="formWidgetCtrl.contactForm.emails.$error">
+                    <div ng-message="minTags" class="error">At Least one email is required</div>
+                </div>
+            </div>
+            <div class="form-subject">
+                <label>Subject</label>
+                <input type="text" name="subject" ng-model="formWidgetCtrl.subject" placeholder="You can add a subject" required/>
+                <div ng-if="formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.subject.$dirty" ng-messages="formWidgetCtrl.contactForm.subject.$error">
+                    <div ng-message="required" class="error">Subject is required</div>
+                </div>
+            </div>
+            <div class="form-message">
+                <label>Message</label>
+                <textarea rows="4" name="message" ng-model="formWidgetCtrl.message" placeholder="Leave your message here" required></textarea>
+                <div ng-if="formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.message.$dirty" ng-messages="formWidgetCtrl.contactForm.message.$error">
+                    <div ng-message="required" class="error">Message is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="save-copy">
+                <div class="custom-check">
+                    <input type="checkbox" value="None" id="saveCheck" name="check" checked/>
+                    <label for="saveCheck"></label>
+                </div>
+                <label class="label-check">Save a Copy</label>
+            </div>
+            <div class="send-mail">
+                <button type="submit" value="Submit">
+                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> Send Mail
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
