@@ -7,7 +7,7 @@
     },
     "CONTACT_FORM_WIDGET": {
         "CONTACT": "Contact",
-        "CONTACT_PLACEHOLDER" :"Add Contact",
+        "CONTACT_PLACEHOLDER": "Add Contact",
         "SUBJECT": "Subject",
         "SUBJECT_PLACEHOLDER": "You can add a subject",
         "MESSAGE": "Message",
@@ -19,5 +19,12 @@
             "SUBJECT": "Subject is required",
             "MESSAGE": "Message is required"
         }
+    },
+    "NAV_WIDGET": {
+        "EDIT_USER": "Edit User",
+        "WEB_STATISTICS": "Web Statistics",
+        "UPLOAD_SETTINGS": "Upload Settings",
+        "EVENTS": "Events",
+        "FOLLOWERS": "followers"
     }
 }

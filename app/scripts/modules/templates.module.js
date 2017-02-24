@@ -4,23 +4,13 @@
  angular.module('widgetTestApp.templates', []).run(['$templateCache', function ($templateCache) {
   'use strict';
 
-  $templateCache.put('views/about.html',
-    "<p>This is the about view.</p>"
-  );
-
-
-  $templateCache.put('views/dashboard/dashboard.template.html',
-    "<div class=\"container\"> <div class=\"content\"> <div class=\"row\"> <div class=\"col-sm-6 col-md-4\"> <profile-widget widget-data=\"dashboardCtrl.dataProfileWidget\"></profile-widget> </div> <div class=\"col-sm-6 col-md-4\"> <statistics-widget widget-data=\"dashboardCtrl.dataStatisticsWidget\"></statistics-widget> </div> <div class=\"col-sm-6 col-md-4\"> <contact-form-widget></contact-form-widget> </div> </div> </div> </div>"
-  );
-
-
-  $templateCache.put('views/main.html',
-    "<div class=\"jumbotron\"> <h1>'Allo, 'Allo!</h1> <p class=\"lead\"> <img src=\"images/yeoman.png\" alt=\"I'm Yeoman\"><br> Always a pleasure scaffolding your apps. </p> <p><a class=\"btn btn-lg btn-success\" ng-href=\"#/\">Splendid!<span class=\"glyphicon glyphicon-ok\"></span></a></p> </div> <div class=\"row marketing\"> <h4>HTML5 Boilerplate</h4> <p> HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites. </p> <h4>Angular</h4> <p> AngularJS is a toolset for building the framework most suited to your application development. </p> <h4>Karma</h4> <p>Spectacular Test Runner for JavaScript.</p> </div>"
-  );
-
-
   $templateCache.put('formWidget/formWidget.template.html',
     "<div class=\"form-widget-container\"> <form name=\"formWidgetCtrl.contactForm\" novalidate> <div class=\"form-body\"> <div class=\"form-contacts\"> <label translate-once=\"CONTACT_FORM_WIDGET.CONTACT\"></label> <tags-input name=\"emails\" ng-model=\"formWidgetCtrl.emails\" min-tags=\"1\" allowed-tags-pattern=\"{{formWidgetCtrl.pattern}}\" placeholder=\"{{'CONTACT_FORM_WIDGET.CONTACT_PLACEHOLDER'| translate}}\"></tags-input> <div ng-if=\"formWidgetCtrl.contactForm.$submitted\" ng-messages=\"formWidgetCtrl.contactForm.emails.$error\"> <div ng-message=\"minTags\" class=\"error\" translate-once=\"CONTACT_FORM_WIDGET.ERROR.CONTACT\"></div> </div> </div> <div class=\"form-subject\"> <label translate-once=\"CONTACT_FORM_WIDGET.SUBJECT\"></label> <input type=\"text\" name=\"subject\" ng-model=\"formWidgetCtrl.subject\" translate-once-placeholder=\"CONTACT_FORM_WIDGET.SUBJECT_PLACEHOLDER\" required> <div ng-if=\"formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.subject.$dirty\" ng-messages=\"formWidgetCtrl.contactForm.subject.$error\"> <div ng-message=\"required\" class=\"error\" translate-once=\"CONTACT_FORM_WIDGET.ERROR.SUBJECT\"></div> </div> </div> <div class=\"form-message\"> <label translate-once=\"CONTACT_FORM_WIDGET.MESSAGE\"></label> <textarea rows=\"4\" name=\"message\" ng-model=\"formWidgetCtrl.message\" translate-once-placeholder=\"CONTACT_FORM_WIDGET.MESSAGE_PLACEHOLDER\" required></textarea> <div ng-if=\"formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.message.$dirty\" ng-messages=\"formWidgetCtrl.contactForm.message.$error\"> <div ng-message=\"required\" class=\"error\" translate-once=\"CONTACT_FORM_WIDGET.ERROR.MESSAGE\"></div> </div> </div> </div> <div class=\"form-footer\"> <div class=\"save-copy\"> <div class=\"custom-check\"> <input type=\"checkbox\" value=\"None\" id=\"saveCheck\" name=\"check\" checked> <label for=\"saveCheck\"></label> </div> <label class=\"label-check\" translate-once=\"CONTACT_FORM_WIDGET.SAVE_A_COPY\"></label> </div> <div class=\"send-mail\"> <button type=\"submit\" value=\"Submit\"> <i class=\"glyphicon glyphicon-ok-sign\" aria-hidden=\"true\"></i> <span translate-once=\"CONTACT_FORM_WIDGET.SEND_MAIL\"></span> </button> </div> </div> </form> </div>"
+  );
+
+
+  $templateCache.put('navWidget/navWidget.template.html',
+    "<div class=\"nav-widget-container\"> <div class=\"nav-header\"> <div class=\"nav-image\"> <img ng-src=\"{{navWidgetCtrl.widgetData.profileImage}}\" alt=\"nav-image\"> </div> <div class=\"nav-description\"> <h5>{{navWidgetCtrl.widgetData.name | uppercase }}</h5> <p>{{navWidgetCtrl.widgetData.desription}} {{'NAV_WIDGET.FOLLOWERS' | translate}}</p> </div> </div> <nav class=\"nav-body\"> <ul> <li ng-click=\"navWidgetCtrl.setSelected(item)\" ng-repeat=\"item in navWidgetCtrl.widgetData.items\" ng-class=\"(item.id ===  navWidgetCtrl.widgetData.itemSelected) ? 'selected': ''\"> <span translate-once=\"{{item.name}}\"></span> <i ng-class=\"item.icon\" aria-hidden=\"true\"></i> </li> </ul> </nav> </div>"
   );
 
 

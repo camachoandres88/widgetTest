@@ -151,6 +151,8 @@ statistics-widget {
                 width: 100%;
                 top: 0px;
                 padding: 30px 30px;
+                text-align: center;
+                overflow: hidden;
             }
         }
         .statistics-body {
@@ -377,7 +379,7 @@ contact-form-widget {
                     line-height: 41px;
                     background: #e05033;
                     border: 1px solid #c44a28;
-                    padding: 0 25px;
+                    padding: 0 10px;
                     border-radius: 5px;
                     font-size: 16px;
                     font-weight: 200;
@@ -386,6 +388,8 @@ contact-form-widget {
                     text-shadow: none;
                     text-decoration: none;
                     cursor: pointer;
+                    width: calc(100% - 10px);
+                    margin-right: 10px;
                     &:hover {
                         background: #c44a28;
                     }
@@ -394,6 +398,80 @@ contact-form-widget {
                     }
                     i {
                         padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+navigation-widget {
+    .nav-widget-container {
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+        margin: 20px 0px;
+        .nav-header {
+            position: relative;
+            min-height: 120px;
+            padding: 15px;
+            background: #b1a599;
+            .nav-image {
+                width: 90px;
+                height: 90px;
+                border: 1px solid #5c5146;
+                padding: 7px;
+                border-radius: 50%;
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                img {
+                    display: block;
+                    border-radius: 50%;
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+            .nav-description {
+                padding-left: 110px;
+                h5 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    color: #ffffff;
+                    margin-bottom: 0px;
+                    margin-top: 25px;
+                }
+                p {
+                    color: #7b6d5e;
+                }
+            }
+        }
+        .nav-body {
+            ul {
+                list-style: none;
+                padding: 0px;
+                li {
+                    padding: 12px 32px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #7b6d5e;
+                    border-left: 3px solid transparent;
+                    cursor: pointer;
+                    span {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                    i {
+                        float: right;
+                    }
+                    &:hover,
+                    &.selected {
+                        background: #f6f0ec;
+                        border-left: 3px solid #4daf7b;
+                        i {
+                            color: #e05033;
+                        }
                     }
                 }
             }

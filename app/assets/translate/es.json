@@ -1,6 +1,6 @@
 {
     "STATISTICS_WIDGET": {
-        "SHARES_TRADED": "Acciones Negociadas",
+        "SHARES_TRADED": "Acc. Negociadas",
         "MARKET_CAP": "Cap. del Mercado",
         "AAPL": "AAPL",
         "YEARLY_CHANGE": "Cambio Anual"
@@ -19,5 +19,12 @@
             "SUBJECT": "Asunto requerido",
             "MESSAGE": "Mensaje requerido"
         }
+    },
+    "NAV_WIDGET": {
+        "EDIT_USER": "Editar Usuario",
+        "WEB_STATISTICS": "Estadisticas Web",
+        "UPLOAD_SETTINGS": "Cargar Configuración",
+        "EVENTS": "Eventos",
+        "FOLLOWERS": "seguidores"
     }
 }
