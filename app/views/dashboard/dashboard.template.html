@@ -8,10 +8,10 @@
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-4">
-                <contact-form-widget></contact-form-widget>
+                <statistics-widget ng-if="dashboardCtrl.dataStatisticsWidget" widget-data='dashboardCtrl.dataStatisticsWidget'></statistics-widget>
             </div>
             <div class="col-sm-6 col-md-4">
-                <statistics-widget ng-if="dashboardCtrl.dataStatisticsWidget" widget-data='dashboardCtrl.dataStatisticsWidget'></statistics-widget>
+                <contact-form-widget></contact-form-widget>
             </div>
             <div class="col-sm-6 col-md-4">
                 <profile-widget ng-if="dashboardCtrl.dataProfileWidget" widget-data='dashboardCtrl.dataProfileWidget'></profile-widget>

@@ -451,6 +451,7 @@ navigation-widget {
         box-shadow: 0 0 12px $shadow;
         margin: 20px 0px;
         .nav-header {
+            border-radius: 5px 5px 0 0;
             position: relative;
             min-height: 120px;
             padding: 15px;
