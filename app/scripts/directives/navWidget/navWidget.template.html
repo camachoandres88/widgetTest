@@ -11,7 +11,7 @@
     <nav class="nav-body">
         <ul>
             <li ng-click="navWidgetCtrl.setSelected(item)" ng-repeat="item in navWidgetCtrl.widgetData.items" ng-class="(item.id ===  navWidgetCtrl.widgetData.itemSelected) ? 'selected': ''">
-                <span translate-once="{{item.name}}"></span>
+                <span translate="{{item.name}}"></span>
                 <i ng-class="item.icon" aria-hidden="true"></i>
             </li>
         </ul>

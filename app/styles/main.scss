@@ -1,15 +1,54 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "variables.scss";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 body {
-    background: #CE9579;
+    background: $orange;
+}
+
+$open-sans: 'Open Sans',
+sans-serif;
+// Styles
+body {
+    font-family: $open-sans;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $open-sans;
+    font-weight: normal;
+}
+
+.button {
+    font-family: $open-sans;
+    font-weight: bold;
+}
+
+.language-buttons {
+    margin: 10px 0px;
+    width: 100%;
+    button {
+        float: right;
+        background: transparent;
+        color: $brown;
+        border: 0px;
+        &:disabled {
+            color: $white;
+        }
+    }
 }
 
 profile-widget {
     .profile-widget-container {
-        background: #fff;
+        background: $white;
         border-radius: 5px;
-        box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+        box-shadow: 0 0 12px $shadow;
         margin: 20px 0px;
         .profile-header {
             position: relative;
@@ -24,11 +63,11 @@ profile-widget {
             position: relative;
             min-height: 120px;
             padding: 10px;
-            background: #fff;
+            background: $white;
             .profile-image {
                 width: 90px;
                 height: 90px;
-                border: 1px solid #BAB8B3;
+                border: 1px solid $softGray;
                 padding: 7px;
                 border-radius: 50%;
                 position: absolute;
@@ -46,11 +85,11 @@ profile-widget {
                 h5 {
                     font-size: 26px;
                     font-weight: 600;
-                    color: #5c5146;
+                    color: $brown;
                     margin-bottom: 10px;
                 }
                 p {
-                    color: #7b6d5e;
+                    color: $softBrown;
                 }
             }
         }
@@ -64,13 +103,13 @@ profile-widget {
                 padding: 0px;
                 li {
                     float: left;
-                    background: #f6f0ec;
+                    background: $darkWhite;
                     font-size: 15px;
                     line-height: 24px;
                     font-weight: 700;
                     text-align: center;
                     width: calc(100% / 3);
-                    border-left: 1px solid #fff;
+                    border-left: 1px solid $white;
                     &:first-child {
                         border-left: 0 none;
                         border-radius: 0 0 0 5px;
@@ -80,13 +119,13 @@ profile-widget {
                     }
                     a {
                         text-decoration: none;
-                        color: #7b6d5e;
+                        color: $softBrown;
                         width: 100%;
                         display: inline-block;
                         padding: 10px 5px;
                         &:hover {
                             cursor: pointer;
-                            color: #e05033;
+                            color: $red;
                         }
                         i {
                             margin-right: 5px;
@@ -106,18 +145,18 @@ profile-widget {
 
 statistics-widget {
     .statistics-widget-container {
-        background: #fff;
+        background: $white;
         border-radius: 5px;
-        box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+        box-shadow: 0 0 12px $shadow;
         margin: 20px 0px;
         .statistics-header {
             height: 160px;
             position: relative;
             .statistics-header-superior {
                 height: 50%;
-                background: #54BC75;
+                background: $green;
                 padding: 15px 20px;
-                color: #ffffff;
+                color: $white;
                 border-radius: 5px 5px 0 0;
                 h3 {
                     font-size: 22px;
@@ -139,7 +178,7 @@ statistics-widget {
             }
             .statistics-header-inferior {
                 height: 50%;
-                background: #4daf7b;
+                background: $darkGreen;
                 overflow: hidden;
                 span {
                     width: 100%;
@@ -159,11 +198,11 @@ statistics-widget {
             padding: 15px 20px;
             .statistics-time {
                 font-size: 12px;
-                color: #bfb8b1;
+                color: $darkGray;
             }
             .statistics-location {
                 font-size: 21px;
-                color: #7b6d5e;
+                color: $softBrown;
             }
             .statistics-time,
             .statistics-location {
@@ -178,20 +217,20 @@ statistics-widget {
                 li {
                     float: left;
                     width: 50%;
-                    background: #f6f0ec;
-                    border-left: 1px solid #fff;
+                    background: $darkWhite;
+                    border-left: 1px solid $white;
                     text-align: center;
                     padding: 15px;
                     strong {
                         display: block;
                         font-size: 18px;
                         font-weight: 600;
-                        color: #7b6d5e;
+                        color: $softBrown;
                         font-weight: 400;
                     }
                     span {
                         font-size: 12px;
-                        color: #ad9e8e;
+                        color: $gray;
                         font-weight: 200;
                     }
                 }
@@ -204,24 +243,24 @@ statistics-widget {
                     width: 50%;
                     h5 {
                         font-size: 14px;
-                        color: #b4b0aa;
+                        color: $softGray;
                         font-weight: 200;
                         padding: 0px 10px;
                     }
                 }
                 .statistics-bottom-number {
                     span {
-                        background: #4daf7b;
+                        background: $darkGreen;
                         padding: 5px;
                         text-align: center;
-                        color: #ffffff;
+                        color: $white;
                         width: calc(100% - 20px);
                         display: inline-block;
                         margin: 0px 10px;
                         font-size: 20px;
                         font-weight: 100;
                         &:hover {
-                            background: #3d9e68;
+                            background: $darknessGreen;
                             cursor: pointer;
                         }
                     }
@@ -238,9 +277,9 @@ statistics-widget {
 
 contact-form-widget {
     .form-widget-container {
-        background: #fff;
+        background: $white;
         border-radius: 5px;
-        box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+        box-shadow: 0 0 12px $shadow;
         margin: 20px 0px;
         .form-body {
             padding: 25px;
@@ -252,19 +291,19 @@ contact-form-widget {
             }
             label {
                 font-size: 16px;
-                color: #8e8071;
+                color: $gray;
             }
             .error {
                 font-size: 13px;
                 font-weight: 200;
-                color: #e05033;
+                color: $red;
             }
             .form-subject,
             .form-message {
                 input,
                 textarea {
                     border-radius: 4px;
-                    border: 1px solid #e5d4c2;
+                    border: 1px solid $softYellow;
                     &:focus {
                         outline-width: 0;
                     }
@@ -288,24 +327,24 @@ contact-form-widget {
                     .tags {
                         min-height: 50px;
                         border-radius: 4px;
-                        border: 1px solid #e5d4c2;
-                        box-shadow: 0px 0px 0px 0px #e5d4c2 inset;
+                        border: 1px solid $softYellow;
+                        box-shadow: 0px 0px 0px 0px $softYellow inset;
                         &:focus,
                         &.focused {
                             outline-width: 0;
-                            box-shadow: 0px 0px 0px 0px #e5d4c2 inset;
+                            box-shadow: 0px 0px 0px 0px $softYellow inset;
                             border-radius: 4px;
                         }
                         .tag-item {
-                            background: #4daf7b;
-                            color: #ffffff;
+                            background: $darkGreen;
+                            color: $white;
                             height: 43px;
                             padding: 8px 15px;
                             span {
                                 font-weight: 200;
                             }
                             a {
-                                color: #ffffff;
+                                color: $white;
                             }
                         }
                         input {
@@ -316,7 +355,7 @@ contact-form-widget {
             }
         }
         .form-footer {
-            background: #f6f0ec;
+            background: $darkWhite;
             height: 90px;
             width: 100%;
             .save-copy,
@@ -339,8 +378,8 @@ contact-form-widget {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        background: #ffffff;
-                        border: 1px solid #ad9e8e;
+                        background: $white;
+                        border: 1px solid $gray;
                         &:after {
                             content: '';
                             width: 11px;
@@ -348,7 +387,7 @@ contact-form-widget {
                             position: absolute;
                             top: 4px;
                             left: 4px;
-                            border: 2px solid #4daf7b;
+                            border: 2px solid $darkGreen;
                             border-top: none;
                             border-right: none;
                             background: transparent;
@@ -369,7 +408,7 @@ contact-form-widget {
                 .label-check {
                     font-size: 16px;
                     font-weight: 200;
-                    color: #ad9e8e;
+                    color: $gray;
                 }
             }
             .send-mail {
@@ -377,13 +416,13 @@ contact-form-widget {
                     display: inline-block;
                     height: 45px;
                     line-height: 41px;
-                    background: #e05033;
-                    border: 1px solid #c44a28;
+                    background: $red;
+                    border: 1px solid $darkRed;
                     padding: 0 10px;
                     border-radius: 5px;
                     font-size: 16px;
                     font-weight: 200;
-                    color: #ffffff;
+                    color: $white;
                     white-space: nowrap;
                     text-shadow: none;
                     text-decoration: none;
@@ -391,7 +430,7 @@ contact-form-widget {
                     width: calc(100% - 10px);
                     margin-right: 10px;
                     &:hover {
-                        background: #c44a28;
+                        background: $darkRed;
                     }
                     &:focus {
                         outline-width: 0;
@@ -407,19 +446,19 @@ contact-form-widget {
 
 navigation-widget {
     .nav-widget-container {
-        background: #ffffff;
+        background: $white;
         border-radius: 5px;
-        box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+        box-shadow: 0 0 12px $shadow;
         margin: 20px 0px;
         .nav-header {
             position: relative;
             min-height: 120px;
             padding: 15px;
-            background: #b1a599;
+            background: $darknessGray;
             .nav-image {
                 width: 90px;
                 height: 90px;
-                border: 1px solid #5c5146;
+                border: 1px solid $brown;
                 padding: 7px;
                 border-radius: 50%;
                 position: absolute;
@@ -438,12 +477,12 @@ navigation-widget {
                     font-size: 16px;
                     font-weight: 400;
                     letter-spacing: 1px;
-                    color: #ffffff;
+                    color: $white;
                     margin-bottom: 0px;
                     margin-top: 25px;
                 }
                 p {
-                    color: #7b6d5e;
+                    color: $softBrown;
                 }
             }
         }
@@ -455,7 +494,7 @@ navigation-widget {
                     padding: 12px 32px;
                     font-size: 14px;
                     line-height: 20px;
-                    color: #7b6d5e;
+                    color: $softBrown;
                     border-left: 3px solid transparent;
                     cursor: pointer;
                     span {
@@ -467,10 +506,10 @@ navigation-widget {
                     }
                     &:hover,
                     &.selected {
-                        background: #f6f0ec;
-                        border-left: 3px solid #4daf7b;
+                        background: $darkWhite;
+                        border-left: 3px solid $darkGreen;
                         i {
-                            color: #e05033;
+                            color: $red;
                         }
                     }
                 }

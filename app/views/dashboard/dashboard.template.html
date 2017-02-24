@@ -1,5 +1,11 @@
 <div class="container">
     <div class="content">
+        <div class="row ">
+            <div class="col-md-12 language-buttons">
+                <button ng-click="dashboardCtrl.changeLanguage('en')" ng-disabled="dashboardCtrl.selectedLang === 'en'" translate="TRANSLATE.ENGLISH"></button>
+                <button ng-click="dashboardCtrl.changeLanguage('es')" ng-disabled="dashboardCtrl.selectedLang === 'es'" translate="TRANSLATE.SPANISH"></button>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <contact-form-widget></contact-form-widget>

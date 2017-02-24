@@ -13,15 +13,18 @@
         .module('widgetTestApp.modules.dashboard')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['InfoService'];
+    DashboardController.$inject = ['InfoService', '$translate'];
 
-    function DashboardController(InfoService) {
+    function DashboardController(InfoService, $translate) {
         var vm = this;
 
         vm.dataProfileWidget = null;
         vm.dataStatisticsWidget = null;
         vm.dataNavWidget = null;
+        vm.selectedLang = $translate.use();
         vm.activate = activate;
+        vm.changeLanguage = changeLanguage;
+
 
         vm.activate();
 
@@ -31,6 +34,11 @@
                 vm.dataStatisticsWidget = result.data.dataStatisticsWidget;
                 vm.dataNavWidget = result.data.dataNavWidget;
             });
+        }
+
+        function changeLanguage(langKey) {
+            vm.selectedLang = langKey;
+            $translate.use(vm.selectedLang);
         }
     }
 })();

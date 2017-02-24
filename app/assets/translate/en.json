@@ -1,4 +1,8 @@
 {
+    "TRANSLATE": {
+        "ENGLISH": "English",
+        "SPANISH": "Spanish"
+    },
     "STATISTICS_WIDGET": {
         "SHARES_TRADED": "Shares Traded",
         "MARKET_CAP": "Market Cap",

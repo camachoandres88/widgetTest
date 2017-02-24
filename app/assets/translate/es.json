@@ -1,4 +1,8 @@
 {
+    "TRANSLATE": {
+        "ENGLISH": "Ingles",
+        "SPANISH": "Español"
+    },
     "STATISTICS_WIDGET": {
         "SHARES_TRADED": "Acc. Negociadas",
         "MARKET_CAP": "Cap. del Mercado",

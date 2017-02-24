@@ -2,24 +2,24 @@
     <form name="formWidgetCtrl.contactForm" novalidate>
         <div class="form-body">
             <div class="form-contacts">
-                <label translate-once="CONTACT_FORM_WIDGET.CONTACT"></label>
-                <tags-input name="emails" ng-model="formWidgetCtrl.emails" min-tags="1" allowed-tags-pattern="{{formWidgetCtrl.pattern}}" placeholder="{{'CONTACT_FORM_WIDGET.CONTACT_PLACEHOLDER'| translate}}"></tags-input>
+                <label translate="CONTACT_FORM_WIDGET.CONTACT"></label>
+                <tags-input name="emails" ng-model="formWidgetCtrl.emails" min-tags="1" allowed-tags-pattern="{{formWidgetCtrl.pattern}}" placeholder="{{formWidgetCtrl.placeholderContact}}"></tags-input>
                 <div ng-if="formWidgetCtrl.contactForm.$submitted" ng-messages="formWidgetCtrl.contactForm.emails.$error">
-                    <div ng-message="minTags" class="error" translate-once="CONTACT_FORM_WIDGET.ERROR.CONTACT"></div>
+                    <div ng-message="minTags" class="error" translate="CONTACT_FORM_WIDGET.ERROR.CONTACT"></div>
                 </div>
             </div>
             <div class="form-subject">
-                <label translate-once="CONTACT_FORM_WIDGET.SUBJECT"></label>
-                <input type="text" name="subject" ng-model="formWidgetCtrl.subject" translate-once-placeholder="CONTACT_FORM_WIDGET.SUBJECT_PLACEHOLDER" required/>
+                <label translate="CONTACT_FORM_WIDGET.SUBJECT"></label>
+                <input type="text" name="subject" ng-model="formWidgetCtrl.subject" placeholder="{{'CONTACT_FORM_WIDGET.SUBJECT_PLACEHOLDER' | translate }}" required/>
                 <div ng-if="formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.subject.$dirty" ng-messages="formWidgetCtrl.contactForm.subject.$error">
-                    <div ng-message="required" class="error" translate-once="CONTACT_FORM_WIDGET.ERROR.SUBJECT"></div>
+                    <div ng-message="required" class="error" translate="CONTACT_FORM_WIDGET.ERROR.SUBJECT"></div>
                 </div>
             </div>
             <div class="form-message">
-                <label translate-once="CONTACT_FORM_WIDGET.MESSAGE"></label>
-                <textarea rows="4" name="message" ng-model="formWidgetCtrl.message" translate-once-placeholder="CONTACT_FORM_WIDGET.MESSAGE_PLACEHOLDER" required></textarea>
+                <label translate="CONTACT_FORM_WIDGET.MESSAGE"></label>
+                <textarea rows="4" name="message" ng-model="formWidgetCtrl.message" placeholder="{{'CONTACT_FORM_WIDGET.MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
                 <div ng-if="formWidgetCtrl.contactForm.$submitted || formWidgetCtrl.contactForm.message.$dirty" ng-messages="formWidgetCtrl.contactForm.message.$error">
-                    <div ng-message="required" class="error" translate-once="CONTACT_FORM_WIDGET.ERROR.MESSAGE"></div>
+                    <div ng-message="required" class="error" translate="CONTACT_FORM_WIDGET.ERROR.MESSAGE"></div>
                 </div>
             </div>
         </div>
@@ -29,11 +29,11 @@
                     <input type="checkbox" value="None" id="saveCheck" name="check" checked/>
                     <label for="saveCheck"></label>
                 </div>
-                <label class="label-check" translate-once="CONTACT_FORM_WIDGET.SAVE_A_COPY"></label>
+                <label class="label-check" translate="CONTACT_FORM_WIDGET.SAVE_A_COPY"></label>
             </div>
             <div class="send-mail">
                 <button type="submit" value="Submit">
-                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> <span translate-once="CONTACT_FORM_WIDGET.SEND_MAIL"></span>
+                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> <span translate="CONTACT_FORM_WIDGET.SEND_MAIL"></span>
                 </button>
             </div>
         </div>
