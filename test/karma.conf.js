@@ -33,6 +33,10 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/jquery.sparkline/index.js',
       'bower_components/ng-tags-input/ng-tags-input.js',
+      'bower_components/angular-translate/angular-translate.js',
+      'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      'bower_components/angular-translate-once/src/translate-once.js',
+      'bower_components/angular-translate-loader-url/angular-translate-loader-url.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -16,23 +16,23 @@
         <ul>
             <li>
                 <strong>{{statisticsWidgetCtrl.widgetData.sharedTraded}}</strong>
-                <span>Shares Traded</span>
+                <span translate-once="STATISTICS_WIDGET.SHARES_TRADED"></span>
             </li>
             <li>
                 <strong>{{statisticsWidgetCtrl.widgetData.marketCap}}</strong>
-                <span>Market Cap</span>
+                <span translate-once="STATISTICS_WIDGET.MARKET_CAP"></span>
             </li>
         </ul>
         <div class="statistics-bottom">
             <div class="statistics-bottom-graph">
-                <h5>AAPL</h5>
+                <h5 translate-once="STATISTICS_WIDGET.AAPL"></h5>
                 <div class="statistics-graph-container">
                     <span sparklines="statisticsWidgetCtrl.widgetData.redBarsGraph.options" values="{{statisticsWidgetCtrl.widgetData.redBarsGraph.data}}"></span>
                     <span sparklines="statisticsWidgetCtrl.widgetData.greenBarsGraph.options" values="{{statisticsWidgetCtrl.widgetData.greenBarsGraph.data}}"></span>
                 </div>
             </div>
             <div class="statistics-bottom-number">
-                <h5>Yearly Change</h5>
+                <h5 translate-once="STATISTICS_WIDGET.YEARLY_CHANGE"></h5>
                 <span>{{statisticsWidgetCtrl.widgetData.yearlyChange}}</span>
             </div>
         </div>

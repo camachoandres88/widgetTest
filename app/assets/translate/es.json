@@ -1,0 +1,23 @@
+{
+    "STATISTICS_WIDGET": {
+        "SHARES_TRADED": "Acciones Negociadas",
+        "MARKET_CAP": "Cap. del Mercado",
+        "AAPL": "AAPL",
+        "YEARLY_CHANGE": "Cambio Anual"
+    },
+    "CONTACT_FORM_WIDGET": {
+        "CONTACT": "Contacto",
+        "CONTACT_PLACEHOLDER": "Agregar Contacto",
+        "SUBJECT": "Asunto",
+        "SUBJECT_PLACEHOLDER": "Puedes agregar un asunto",
+        "MESSAGE": "Mensaje",
+        "MESSAGE_PLACEHOLDER": "Deja tu mensaje",
+        "SAVE_A_COPY": "Guardar Copia",
+        "SEND_MAIL": "Enviar Email",
+        "ERROR": {
+            "CONTACT": "Al menos un contacto es requerido",
+            "SUBJECT": "Asunto requerido",
+            "MESSAGE": "Mensaje requerido"
+        }
+    }
+}

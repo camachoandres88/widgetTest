@@ -1,0 +1,23 @@
+{
+    "STATISTICS_WIDGET": {
+        "SHARES_TRADED": "Shares Traded",
+        "MARKET_CAP": "Market Cap",
+        "AAPL": "AAPL",
+        "YEARLY_CHANGE": "Yearly Change"
+    },
+    "CONTACT_FORM_WIDGET": {
+        "CONTACT": "Contact",
+        "CONTACT_PLACEHOLDER" :"Add Contact",
+        "SUBJECT": "Subject",
+        "SUBJECT_PLACEHOLDER": "You can add a subject",
+        "MESSAGE": "Message",
+        "MESSAGE_PLACEHOLDER": "Leave your message here",
+        "SAVE_A_COPY": "Save a Copy",
+        "SEND_MAIL": "Send Mail",
+        "ERROR": {
+            "CONTACT": "At Least one contact is required",
+            "SUBJECT": "Subject is required",
+            "MESSAGE": "Message is required"
+        }
+    }
+}

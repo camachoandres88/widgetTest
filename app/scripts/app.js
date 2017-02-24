@@ -13,6 +13,8 @@
     angular
         .module('widgetTestApp', [
             'ui.router',
+            'ngSanitize',
+            'pascalprecht.translate',
             'widgetTestApp.modules',
             'widgetTestApp.directives',
             'widgetTestApp.services'

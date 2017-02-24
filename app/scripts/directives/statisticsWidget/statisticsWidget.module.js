@@ -10,5 +10,8 @@
      */
 
     angular
-        .module('widgetTestApp.directives.statisticsWidget', ['widgetTestApp.directives.charts']);
+        .module('widgetTestApp.directives.statisticsWidget', [
+            'widgetTestApp.directives.charts',
+            'pascalprecht.translate'
+        ]);
 })();
